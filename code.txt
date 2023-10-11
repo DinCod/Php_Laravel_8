@@ -1,0 +1,29 @@
+**php artisan sever -> ejecuta un entorno virtual para le navegador.
+**php artisan migrate -> actualiza tu base de datos con los modelos que tengas en le proyecto.
+**php artisan migrate:rollback -> invertir los cambios de la base de datos.
+
+**codigo para crear una migracion : 
+php artisan make:migration create_###_table
+
+**codigo para crear un modelo :
+php artisan make:model #name
+
+
+**seeders/factorias ---> sirven para generar datos faltos : trabaja junto con las factorias.
+factory -> php artisan make:factory ###Factory
+seeders -> php artisan make:seeder  ###seeder
+**comandos
+php artisan db:seed
+php artisan make:factory #nameFactory
+php artisan make:seeder  #nameSeeder
+"#campo" => $this->faker->text(#long);   
+php artisan migrate:frest/reset --seed 
+
+**resetea toda la db::: 
+php artisan migrate:reset
+
+**moficiar  el valor de una columna de la base de datos
+php artisan make:migration update_#name_column_to_#table_name_table
+    $table->string('name', 50)->change();
+    $table->renameColumn('from', 'to');
+
